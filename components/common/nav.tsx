@@ -24,14 +24,14 @@ export default function Nav() {
           MBTI Personality Test
         </Button>
       </Link>
-      <Link href="/test/result/history">
+     /* <Link href="/test/result/history">
         <Button
           variant="outline"
           leftIcon={<BiHistory size={24} />}
         >
           Test Result History
         </Button>
-      </Link>
+      </Link>*/
     </Flex>
   );
 }
