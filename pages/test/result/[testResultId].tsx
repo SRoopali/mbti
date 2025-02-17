@@ -42,7 +42,7 @@ export default function TestResultPage() {
             Ok: (value) =>
               value.match({
                 Some: (data) => (
-                  <Flex
+                  /*<Flex
                     h="full"
                     direction={{
                       base: "column",
@@ -54,7 +54,8 @@ export default function TestResultPage() {
                     <Show above="lg">
                       <TestResultTableOfContent />
                     </Show>
-                  </Flex>
+                  </Flex> */
+                  <Text>Your comprehensive personality report has been mailed to your mailbox </Text>
                 ),
                 None: () => <Text>No Data</Text>,
               }),
