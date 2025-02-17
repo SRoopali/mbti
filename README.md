@@ -40,7 +40,6 @@
 
 ## Contact
 
-Abdul Rauf - rauf21dev@gmail.com
 
 Project Link: [https://github.com/rauf-21/mbti-personality-test-app](https://github.com/rauf-21/mbti-personality-test-app)
 
