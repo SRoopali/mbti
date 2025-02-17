@@ -38,10 +38,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Contact
-
-
-Project Link: [https://github.com/rauf-21/mbti-personality-test-app](https://github.com/rauf-21/mbti-personality-test-app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
