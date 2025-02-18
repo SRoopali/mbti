@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { Heading, Text, Highlight, Flex, Button } from "@chakra-ui/react";
 import { FiArrowRight } from "react-icons/fi";
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import jsPDF from 'jspdf';
+import { loadGoogleAPI, signInWithGoogle, uploadFileToDrive, isUserSignedIn } from '../utils/google-api';
+import { Button, Text, Heading } from '@chakra-ui/react'; // Or your UI components
 
 import MainLayout from "../components/layouts/main-layout";
 

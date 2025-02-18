@@ -1,0 +1,31 @@
+// utils/google-api.js
+import { gapi } from 'gapi-script';
+
+const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID; // From Netlify environment variables
+const GOOGLE_API_SCOPES = 'https://www.googleapis.com/auth/drive.file';
+
+export const loadGoogleAPI = () => {
+  return new Promise((resolve, reject) => {
+    gapi.load('client:auth2', () => {
+      gapi.client.init({
+        clientId: GOOGLE_CLIENT_ID,
+        discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
+        scope: GOOGLE_API_SCOPES,
+      }).then(() => {
+        resolve();
+      }).catch(reject);
+    });
+  });
+};
+
+export const signInWithGoogle = () => {
+  return gapi.auth2.getAuthInstance().signIn();
+};
+
+export const uploadFileToDrive = (file, metadata) => {
+    return gapi.client.drive.files.create({ body: metadata, mediaBody: file, });
+}
+
+export const isUserSignedIn = () => {
+    return gapi.auth2.getAuthInstance().isSignedIn.get();
+}
